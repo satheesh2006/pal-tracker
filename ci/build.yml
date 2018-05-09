@@ -33,3 +33,5 @@ run:
     service mysql stop
 
     cp build/libs/pal-tracker-*.jar ../build-output
+
+
