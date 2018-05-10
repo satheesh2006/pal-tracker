@@ -2,10 +2,13 @@ package test.pivotal.pal.tracker;
 
 import io.pivotal.pal.tracker.WelcomeController;
 import org.junit.Test;
+import org.springframework.boot.context.embedded.LocalServerPort;
+import org.springframework.boot.test.web.client.TestRestTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class WelcomeControllerTest {
+
 
     @Test
     public void itSaysHello() throws Exception {

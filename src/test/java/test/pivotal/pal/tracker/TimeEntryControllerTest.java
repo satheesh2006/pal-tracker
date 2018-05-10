@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.springframework.boot.actuate.metrics.CounterService;
 import org.springframework.boot.actuate.metrics.GaugeService;
+import org.springframework.boot.context.embedded.LocalServerPort;
+import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -27,6 +29,8 @@ public class TimeEntryControllerTest {
     private CounterService counterService ;
 
     private GaugeService gaugeService;
+
+
 
     @Before
     public void setUp() throws Exception {

@@ -18,6 +18,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-jdbc")
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("mysql:mysql-connector-java:6.0.6")
+    compile("org.springframework.boot:spring-boot-starter-security")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
@@ -26,6 +27,7 @@ bootRun.environment([
         "WELCOME_MESSAGE": "hello",
         "SPRING_DATASOURCE_URL": developmentDbUrl,
         "MANAGEMENT_SECURITY_ENABLED": false,
+        "HTTPS_DISABLED":true,
 ])
 
 def testDbUrl = "jdbc:mysql://localhost:3306/tracker_test?user=tracker&useSSL=false&useTimezone=true&serverTimezone=UTC&useLegacyDatetimeCode=false"
@@ -33,6 +35,7 @@ test.environment([
         "WELCOME_MESSAGE": "Hello from test",
         "SPRING_DATASOURCE_URL": testDbUrl,
         "MANAGEMENT_SECURITY_ENABLED": false,
+        "HTTPS_DISABLED":true,
 ])
 
 

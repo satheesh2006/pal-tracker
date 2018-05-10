@@ -4,10 +4,14 @@ import org.junit.Test;
 
 import java.util.Map;
 import io.pivotal.pal.tracker.EnvController;
+import org.springframework.boot.context.embedded.LocalServerPort;
+import org.springframework.boot.test.web.client.TestRestTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class EnvControllerTest {
+
+
     @Test
     public void getEnv() throws Exception {
         EnvController controller = new EnvController(
